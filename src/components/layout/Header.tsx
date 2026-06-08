@@ -28,8 +28,8 @@ export function Header() {
             className="h-12 w-12 shrink-0 object-contain"
           />
           <div className="flex flex-col leading-tight">
-            <span className="font-display text-lg font-bold text-foreground sm:text-xl">
-              Instituto Criar Ativa Mente
+            <span className="font-display text-xl font-extrabold leading-tight tracking-tight gradient-text sm:text-2xl lg:text-[1.7rem]">
+              Instituto <span className="text-primary">Criar</span> <span className="text-accent-foreground">Ativa</span> <span className="text-primary-glow">Mente</span>
             </span>
             <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground sm:text-xs">
               Transformando vidas pela educação
