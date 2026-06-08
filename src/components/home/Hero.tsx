@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Heart, Handshake, GraduationCap, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 export function Hero() {
   return (
@@ -12,7 +13,7 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-12 lg:px-8 lg:py-32">
         <div className="lg:col-span-7 animate-fade-in-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" /> Instituto CriarAtivaMente
+            <img src={logo} alt="Logo Instituto Criar Ativa Mente" className="h-5 w-5 rounded-full object-cover" /> Instituto Criar Ativa Mente
           </span>
           <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Transformando <span className="gradient-text">educação</span>, desenvolvimento humano e impacto social em experiências reais.
