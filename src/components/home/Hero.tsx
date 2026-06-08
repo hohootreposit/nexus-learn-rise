@@ -12,8 +12,9 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-12 lg:px-8 lg:py-32">
         <div className="lg:col-span-7 animate-fade-in-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur">
-            <img src={logo} alt="Logo Instituto Criar Ativa Mente" className="h-5 w-5 rounded-full object-cover" /> Instituto Criar Ativa Mente
+          <span className="inline-flex items-center gap-3 rounded-full border-2 border-primary/30 bg-background/80 px-5 py-2.5 text-sm sm:text-base font-bold uppercase tracking-wider text-primary shadow-elegant backdrop-blur">
+            <img src={logo} alt="Logo Instituto Criar Ativa Mente" className="h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover ring-2 ring-primary/20" />
+            <span className="gradient-text">Instituto Criar Ativa Mente</span>
           </span>
           <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Transformando <span className="gradient-text">educação</span>, desenvolvimento humano e impacto social em experiências reais.
