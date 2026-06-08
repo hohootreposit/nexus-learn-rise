@@ -41,39 +41,40 @@
   --radius: 0.875rem;
 
   --background: oklch(0.995 0.005 230);
-  --foreground: oklch(0.25 0.04 240);
+  --foreground: oklch(0.18 0.05 245);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.04 240);
+  --card-foreground: oklch(0.18 0.05 245);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.04 240);
+  --popover-foreground: oklch(0.18 0.05 245);
 
-  /* Azul pastel — confiança, conhecimento, serenidade */
-  --primary: oklch(0.72 0.11 235);
-  --primary-foreground: oklch(0.22 0.05 240);
-  --primary-glow: oklch(0.86 0.08 195);
+  /* Azul — confiança, conhecimento, serenidade (com mais profundidade para contraste) */
+  --primary: oklch(0.58 0.15 240);
+  --primary-foreground: oklch(0.99 0.005 230);
+  --primary-glow: oklch(0.7 0.13 200);
 
-  --secondary: oklch(0.96 0.02 220);
-  --secondary-foreground: oklch(0.3 0.06 240);
+  --secondary: oklch(0.95 0.025 220);
+  --secondary-foreground: oklch(0.22 0.06 240);
 
-  --muted: oklch(0.965 0.012 220);
-  --muted-foreground: oklch(0.5 0.03 235);
+  --muted: oklch(0.96 0.012 220);
+  --muted-foreground: oklch(0.42 0.04 235);
 
-  /* Verde menta — crescimento, futuro, esperança */
-  --accent: oklch(0.92 0.06 165);
-  --accent-foreground: oklch(0.3 0.08 175);
+  /* Verde — crescimento, futuro, esperança */
+  --accent: oklch(0.78 0.12 165);
+  --accent-foreground: oklch(0.22 0.08 175);
 
-  --destructive: oklch(0.72 0.14 30);
+  --destructive: oklch(0.62 0.18 30);
   --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.92 0.015 220);
-  --input: oklch(0.92 0.015 220);
-  --ring: oklch(0.72 0.11 235);
+  --border: oklch(0.88 0.02 225);
+  --input: oklch(0.88 0.02 225);
+  --ring: oklch(0.58 0.15 240);
 
-  /* Pêssego suave — acolhimento e criatividade no glow */
-  --gradient-hero: linear-gradient(135deg, oklch(0.82 0.09 235) 0%, oklch(0.88 0.08 195) 45%, oklch(0.9 0.07 165) 100%);
-  --gradient-soft: linear-gradient(180deg, oklch(0.99 0.008 225) 0%, oklch(0.95 0.03 200) 100%);
-  --gradient-glow: radial-gradient(circle at 50% 0%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 60%);
+  /* Degradê com mais presença mantendo a paleta educacional */
+  --gradient-hero: linear-gradient(135deg, oklch(0.58 0.15 240) 0%, oklch(0.65 0.13 200) 50%, oklch(0.75 0.11 165) 100%);
+  --gradient-soft: linear-gradient(180deg, oklch(0.99 0.008 225) 0%, oklch(0.93 0.04 205) 100%);
+  --gradient-glow: radial-gradient(circle at 50% 0%, color-mix(in oklab, var(--primary) 22%, transparent), transparent 60%);
+
 
   --shadow-elegant: 0 20px 50px -20px color-mix(in oklab, var(--primary) 30%, transparent);
   --shadow-soft: 0 10px 30px -15px color-mix(in oklab, var(--primary) 18%, transparent);

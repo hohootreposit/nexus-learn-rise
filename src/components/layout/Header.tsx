@@ -10,38 +10,39 @@ const navItems = [
   { to: "/quem-somos", label: "Quem Somos" },
   { to: "/solucoes", label: "Soluções" },
   { to: "/impacto", label: "Impacto" },
-  { to: "/metodologia", label: "Metodologia" },
-  { to: "/escolas-prefeituras", label: "Escolas e Prefeituras" },
-  { to: "/conteudos", label: "Conteúdos" },
-  { to: "/transparencia", label: "Transparência" },
   { to: "/parcerias", label: "Parcerias" },
+  { to: "/transparencia", label: "Transparência" },
+  { to: "/contato", label: "Contato" },
 ] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex shrink-0 items-center gap-2 font-display text-base font-bold">
-          <img src={logo} alt="Instituto CriarAtivaMente" className="h-9 w-9 object-contain" />
-          <span className="whitespace-nowrap">Instituto CriarAtivaMente</span>
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-lg">
+      {/* Linha 1: logo + nome + tagline + CTA */}
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <Link to="/" className="flex shrink-0 items-center gap-3">
+          <img
+            src={logo}
+            alt="Instituto Criar Ativa Mente"
+            className="h-12 w-12 shrink-0 object-contain"
+          />
+          <div className="flex flex-col leading-tight">
+            <span className="font-display text-lg font-bold text-foreground sm:text-xl">
+              Instituto Criar Ativa Mente
+            </span>
+            <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground sm:text-xs">
+              Transformando vidas pela educação
+            </span>
+          </div>
         </Link>
 
-        <nav className="hidden flex-1 items-center justify-end gap-0.5 lg:flex">
-          {navItems.map((it) => (
-            <Link
-              key={it.to}
-              to={it.to}
-              className="whitespace-nowrap rounded-md px-2 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-              activeProps={{ className: "text-foreground bg-secondary" }}
-            >
-              {it.label}
-            </Link>
-          ))}
-        </nav>
-
         <div className="flex shrink-0 items-center gap-2">
-          <Button asChild variant="default" className="hidden sm:inline-flex gradient-hero text-primary-foreground border-0 shadow-soft hover:opacity-90">
+          <Button
+            asChild
+            variant="default"
+            className="hidden sm:inline-flex gradient-hero text-primary-foreground border-0 shadow-soft hover:opacity-90"
+          >
             <Link to="/contato">Apoie</Link>
           </Button>
           <Sheet open={open} onOpenChange={setOpen}>
@@ -73,6 +74,22 @@ export function Header() {
             </SheetContent>
           </Sheet>
         </div>
+      </div>
+
+      {/* Linha 2: navegação (apenas desktop) */}
+      <div className="hidden border-t border-border bg-secondary/40 lg:block">
+        <nav className="mx-auto flex max-w-7xl items-center justify-center gap-1 px-4 sm:px-6 lg:px-8">
+          {navItems.map((it) => (
+            <Link
+              key={it.to}
+              to={it.to}
+              className="whitespace-nowrap rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+              activeProps={{ className: "text-primary bg-background" }}
+            >
+              {it.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );
